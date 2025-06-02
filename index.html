@@ -704,6 +704,33 @@
             padding: 50px 10px;
             margin-top: 30px;
         }
+
+    .info-textopop {
+    width: 100%;
+    margin: 5; /* 左右の余白をなくす */
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: #eef9f5;
+    padding: 6px;
+    border-radius: 4px;
+    box-sizing: border-box; /* パディングを含めてもはみ出さないように */
+    margin-bottom: 10px; /* 下に10pxの隙間を作る */
+}
+
+        /* 携帯端末向けのレスポンシブデザイン */
+        @media (max-width: 768px) {
+            .info-text {
+                font-size: 11.5px;
+                /* スマホでは少し小さく */
+                margin-top: 10px;
+                /* 上下のマージンを調整 */
+                line-height: 2.0;
+                /* テキストの高さ調整 */
+            }
+        }
     </style>
 </head>
 
@@ -749,16 +776,22 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">もみほぐし60分</button>
+                <div class="info-textopop">3900円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">もみほぐし75分</button>
+                <div class="info-textopop">4870円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">もみほぐし90分</button>
+                <div class="info-textopop">5850円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment4')" data-price="15000">もみほぐし120分</button>
+                <div class="info-textopop">7800円</div>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
             <div class="irradiations">
                 <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">足ツボマッサージ</button>
+                <div class="info-textopop">2150円</div>
                 <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">ヘッドマッサージ</button>
+                <div class="info-textopop">1900円</div>
             </div>
         </div>
 
@@ -768,16 +801,22 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">もみほぐし＋ペアストレッチ75分</button>
+                <div class="info-textopop">5870円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">もみほぐし＋ペアストレッチ90分</button>
+                <div class="info-textopop">6850円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">もみほぐし＋ペアストレッチ105分</button>
+                <div class="info-textopop">7830円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">もみほぐし＋ペアストレッチ120分</button>
+                <div class="info-textopop">8800円</div>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
             <div class="irradiations">
                 <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">足ツボマッサージ</button>
+                <div class="info-textopop">2150円</div>
                 <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">ヘッドマッサージ</button>
+                <div class="info-textopop">1900円</div>
             </div>
         </div>
 
@@ -787,16 +826,22 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">上肢コース60分</button>
+                <div class="info-textopop">4500円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">下肢コース60分</button>
+                <div class="info-textopop">4500円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">全身コース90分</button>
+                <div class="info-textopop">8000円</div>
                 <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">全身コース120分</button>
+                <div class="info-textopop">10200円</div>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">マッサージコース：オプション</span>
             </div>
             <div class="irradiations">
                 <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">足ツボマッサージ</button>
+                <div class="info-textopop">2150円</div>
                 <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">ヘッドマッサージ</button>
+                <div class="info-textopop">1900円</div>
             </div>
         </div>
 
@@ -806,6 +851,7 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">足ツボマッサージ60分</button>
+                <div class="info-textopop">4300円</div>
             </div>
         </div>
 
@@ -815,6 +861,7 @@
             </div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">ヘッドマッサージ60分</button>
+                <div class="info-textopop">5800円</div>
             </div>
         </div>
 
@@ -1336,7 +1383,7 @@
                 return;
             }
 
-            const url = 'https://script.google.com/macros/s/AKfycbzcsgYFgnpxg86A9IpaDRjEryR9fFNvJ5Y27fCPtha4purYOBv6Ogc0J69IAIURzBkK/exec' +
+            const url = 'https://script.google.com/macros/s/AKfycbyWs7Stm9B2i2XGINoKqR0W_qrPuoLzPJMXtjGS9BQMo9YrOoUtV2Jc2C4Oe_0BoSv0/exec' +
                 `?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
 
             try {
