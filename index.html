@@ -310,16 +310,12 @@
 
         .week-button {
             padding: 10px 20px;
-            background-color: #ffffff;
-            color: #222222;
-            border: 1px solid black;
-            /* ← 外枠を黒1pxに設定 */
+            background-color: #444444;
+            color: #fff;
+            border: none;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            transform-origin: center center;
         }
-
         .month-button-container {
             display: flex;
             justify-content: space-between;
@@ -335,6 +331,25 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+        }
+
+        /* 前月・翌月・前週・翌週ボタンはタップしても見た目を変えない */
+        .week-button,
+        .month-button {
+            -webkit-tap-highlight-color: transparent;
+            transition: none;
+        }
+
+        .week-button:hover,
+        .week-button:active,
+        .week-button:focus,
+        .month-button:hover,
+        .month-button:active,
+        .month-button:focus {
+            background-color: #444444;
+            color: #fff;
+            transform: none;
+            outline: none;
         }
 
         .current-month {
